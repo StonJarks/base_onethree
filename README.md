@@ -9,9 +9,10 @@ A starting point for Meteor apps.
     </tr>
     <tr>
       <th>Meteor Version</th>
-      <td>v1.3.0</td>
+      <td>v1.3.rc-3</td>
     </tr>
   </tbody>
 </table>
 
 [Read the Documentation](http://themeteorchef.com/base)
+[And the guide](http://http://guide.meteor.com/v1.3)
