@@ -1,0 +1,15 @@
+<template name="dashboard">
+	<div class="row">
+		<div class="col-xs-6">
+			 <h4>Dashboard</h4>
+			 <ul>
+			 	{{#each posts}}
+			 		<li>
+			 			<h5>{{title}}</h5>
+			 			<p>{{content}}</p>
+			 		</li>
+			 	{{/each}}
+			 </ul>
+		</div>
+	</div>
+</template>
