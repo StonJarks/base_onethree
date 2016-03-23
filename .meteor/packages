@@ -7,7 +7,6 @@ accounts-password
 accounts-base
 jquery
 check
-audit-argument-checks
 themeteorchef:jquery-validation
 browser-policy
 
@@ -38,3 +37,6 @@ standard-minifier-js
 digilord:faker
 mdg:validated-method
 aldeed:simple-schema@1.5.3
+practicalmeteor:chai
+xolvio:cleaner
+practicalmeteor:mocha@2.1.1-rc.1

@@ -20,12 +20,12 @@ export const insert = new ValidatedMethod({
 	},
 });
 
-
 export const update = new ValidatedMethod({
 	name: 'posts.update',
 	validate: new SimpleSchema({
-		title: { type: String },
-		content: { type: String }
+		postId: { type: String },
+		newTitle: { type: String },
+		newContent: { type: String }
 	}).validator(),
 	run( { postId, newTitle, newContent }) {
 		Posts.update(postId, {
