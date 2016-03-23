@@ -1,13 +1,12 @@
-//TODO this is not tested if working! pushed anyway
+//TODO there is an issue with logged in / not logged in users!
 
-import { Mongo } from 'meteor/mongo';
-import { Factory } from 'meteor/factory';
+import { Meteor } from 'meteor/meteor';
 import { chai, expect } from 'meteor/practicalmeteor:chai';
 import { Template } from 'meteor/templating';
 import { _ } from 'meteor/underscore';
 import { $ } from 'meteor/jquery';
 
-import '../dashboard.js';
+import './dashboard.js';
 
 import { withRenderedTemplate } from '../../test-helpers.js';
 
@@ -21,7 +20,10 @@ describe( 'Dashboard', () => {
 	});
 
 	it('renders correctly with simple data', () => {
-		const post = Factory.build( 'post' );
+		let args = { title: 'new Title', content: 'new Content' };
+
+		//const post = insert._execute( methodInvocation, args );
+		const post = Meteor.call('posts.insert', args);
 
 		withRenderedTemplate('dashboard', post, el => {
 			expect( $( el ).find('.post-item').length).to.equal( 1 );
